@@ -69,14 +69,20 @@
                   <ul>
                     <li class="form-field">
                       <label for="name" class="form-label">Имя</label>
+                      <svg class="modal-svg" width="18px" height="18px" ><use href="./images/icons.svg#icon-person"></use>
+                      </svg>
                       <input type="text" class="form-input" name="name" placeholder=" " />
                     </li>
                     <li class="form-field">
                       <label for="tel" class="form-label">Телефон</label>
+                      <svg class="modal-svg" width="18px" height="18px" ><use href="./images/icons.svg#icon-phone"></use>
+                        </svg>
                       <input type="tel" class="form-input" name="tel" placeholder=" " />
                     </li>
                     <li class="form-field">
-                      <label for="mail" class="form-label">Почта</label>
+                      <label for="mail" class="form-label"> Почта</label>
+                      <svg class="modal-svg"width="18px" height="18px" ><use href="./images/icons.svg#icon-email"></use>
+                      </svg>
                       <input type="email" class="form-input" name="mail" placeholder=" " />
                     </li>
                     <li class="form-field">
@@ -84,11 +90,13 @@
                       <textarea name="teaxtarea" placeholder="Введите текст"></textarea>
                     </li>
                   </ul>
-                  <label for="checkbox"
-                    >Соглашаюсь с рассылкой и принимаю
-                    <a href="">Условия договора</a>
+                  <label class="label">
+                    <input type="checkbox" name="checkbox" class="checkbox" />
+                    <span class="check-button"></span>
+                      Соглашаюсь с рассылкой и принимаю
+                    <a href="" class="agreement">Условия договора</a>
                   </label>
-                  <input type="checkbox" name="checkbox" class="checkbox" />
+                  
                   <div class="modal-button">
                     <button type="submit" class="button">Отправить</button>
                   </div>

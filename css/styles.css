@@ -334,6 +334,7 @@ img {
   border-radius: 4px;
   border: 1px solid;
   border-color: var(--input-border);
+  padding-left: 42px;
 }
 textarea {
   resize: none;
@@ -347,8 +348,12 @@ textarea {
   margin-bottom: 20px;
   padding: 12px 16px;
 }
+.label{
+  display: block;
+  position: relative;
+  outline: solid 2px tomato;
+}
 .checkbox {
-  position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -357,8 +362,35 @@ textarea {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.check-button{
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  border: solid 2px var(--secondary-text-colour);
+}
+.checkbox:checked + .check-button{
+  background-color: var(--accent-colour);
+  border-color: transparent;
+  background-image: url('../images/check.svg');
+  background-size: contain;
+  background-origin: border-box;
+}
+.agreement{
+  color: var(--accent-colour);
+  text-decoration: underline;
+}
 .modal-button {
   text-align: center;
+}
+.modal-svg{
+  fill: var(--secondary-text-colour);
+  position: absolute;
+  top: 11px;
+  left: 12px;
 }
 /* Преимущества */
 .flex-item .benefit + .benefit {
@@ -572,7 +604,7 @@ textarea {
   margin-bottom: 20px;
 }
 
-.container.footer-flex {
+.container.footer-flex{
   display: flex;
   align-items: baseline;
 }
