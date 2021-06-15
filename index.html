@@ -68,26 +68,30 @@
                   <b class="modal-header">Оставьте свои данные, мы вам перезвоним</b>
                   <ul>
                     <li class="form-field">
-                      <label for="name" class="form-label">Имя</label>
+                      <label for="name" class="form-label">
+                        Имя</label>
+                        <input type="text" class="form-input" name="name" placeholder=" " autofocus/>
                       <svg class="modal-svg" width="18px" height="18px" ><use href="./images/icons.svg#icon-person"></use>
                       </svg>
-                      <input type="text" class="form-input" name="name" placeholder=" " />
                     </li>
                     <li class="form-field">
                       <label for="tel" class="form-label">Телефон</label>
+                      <input type="tel" class="form-input" name="tel" placeholder=" " />
                       <svg class="modal-svg" width="18px" height="18px" ><use href="./images/icons.svg#icon-phone"></use>
                         </svg>
-                      <input type="tel" class="form-input" name="tel" placeholder=" " />
                     </li>
                     <li class="form-field">
                       <label for="mail" class="form-label"> Почта</label>
+                      <input type="email" class="form-input" name="mail" placeholder=" " />
                       <svg class="modal-svg"width="18px" height="18px" ><use href="./images/icons.svg#icon-email"></use>
                       </svg>
-                      <input type="email" class="form-input" name="mail" placeholder=" " />
                     </li>
                     <li class="form-field">
-                      <label for="teaxtarea" class="form-label">Комментарий</label>
-                      <textarea name="teaxtarea" placeholder="Введите текст"></textarea>
+                      <label for="teaxtarea" class="form-label">
+                        Комментарий
+                      </label>
+                      <textarea name="teaxtarea" class="textarea"placeholder="Введите текст"></textarea>
+                      
                     </li>
                   </ul>
                   <label class="label">
@@ -482,7 +486,7 @@
           </form>
         </div>
         <div class="subscribe-button">
-          <button type="submit" class="button">Подписаться</button>
+          <button type="submit" class="button footer">Подписаться</button>
         </div>
       </div>
     </footer>
