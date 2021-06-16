@@ -20,7 +20,7 @@
   --overlay-color: rgba(33, 150, 243, 0.9);
   --product-overlay: rgba(47, 48, 58, 0.8);
   --input-border: rgba(33, 33, 33, 0.2);
-  --textarea-color:rgba(117, 117, 117, 0.5);
+  --textarea-color: rgba(117, 117, 117, 0.5);
 }
 body {
   background-color: var(--primary-white-colour);
@@ -277,6 +277,11 @@ img {
   text-align: left;
   z-index: 3;
 }
+.form-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .close-button {
   display: flex;
   justify-content: flex-end;
@@ -295,6 +300,8 @@ img {
   justify-content: center;
   align-items: center;
   padding: 0;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close:hover,
 .modal-close:focus {
@@ -302,7 +309,10 @@ img {
 }
 .form {
   width: 448px;
-  margin: 2px 40px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .form-field {
   position: relative;
@@ -320,6 +330,9 @@ img {
   display: block;
   margin-bottom: 30px;
 }
+.form-boxes {
+  width: 100%;
+}
 .form-label {
   position: absolute;
   top: 0;
@@ -336,17 +349,21 @@ img {
   border-radius: 4px;
   border: 1px solid var(--input-border);
   padding-left: 42px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input:hover,
-.form-input:focus{
+.form-input:focus {
   border: 1px solid var(--accent-colour);
   outline: 1px var(--accent-colour);
 }
-.form-field:last-of-type{
+
+.form-field:last-of-type {
   margin-bottom: 20px;
 }
+
 .form-field:hover .modal-svg,
-.form-field:focus-within .modal-svg{
+.form-field:focus-within .modal-svg {
   fill: var(--accent-colour);
 }
 .textarea {
@@ -359,24 +376,26 @@ img {
   border-color: var(--input-border);
 
   padding: 12px 16px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .textarea:hover,
-.textarea:focus{
+.textarea:focus {
   border: 1px solid var(--accent-colour);
   outline: 1px var(--accent-colour);
 }
-.textarea::placeholder{
+.textarea::placeholder {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: var(--textarea-color);
 }
-.label{
+.label {
   display: block;
   position: relative;
   line-height: 1.71;
   margin-bottom: 30px;
-  text-align: center;
+  padding-left: 24px;
 }
 .checkbox {
   width: 1px;
@@ -387,7 +406,7 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.check-button{
+.check-button {
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -398,26 +417,28 @@ img {
   border-radius: 2px;
   border: solid 2px var(--secondary-text-colour);
 }
-.checkbox:checked + .check-button{
+.checkbox:checked + .check-button {
   background-color: var(--accent-colour);
   border-color: transparent;
   background-image: url('../images/check.svg');
   background-size: contain;
   background-origin: border-box;
 }
-.agreement{
+.agreement {
   color: var(--accent-colour);
   text-decoration: underline;
 }
 .modal-button {
   text-align: center;
 }
-.modal-svg{
+.modal-svg {
   fill: var(--secondary-text-colour);
   position: absolute;
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Преимущества */
 .flex-item .benefit + .benefit {
@@ -558,9 +579,6 @@ img {
 .clients-list {
   width: 170px;
   height: 92px;
-
-  border: 1px solid var(--link-color);
-  border-radius: 4px;
 }
 .clients-link {
   width: 100%;
@@ -569,21 +587,24 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  border: 1px solid var(--link-color);
+  border-radius: 4px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .company-logo {
   fill: var(--link-color);
 }
-.clients-list {
-  transition: border-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.clients-list:hover,
-.clients-list:focus {
+
+.clients-link:hover,
+.clients-link:focus {
   border-color: var(--accent-colour);
 }
-.clients-list .company-logo {
+.company-logo {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.clients-list:hover .company-logo,
+.clients-link:hover .company-logo,
 .clients-link:focus .company-logo {
   fill: var(--accent-colour);
 }
@@ -631,7 +652,7 @@ img {
   margin-bottom: 20px;
 }
 
-.footer-flex{
+.footer-flex {
   display: flex;
   align-items: baseline;
 }
@@ -669,7 +690,7 @@ img {
 .subscribe {
   margin-left: 93px;
 }
-.footer-form{
+.footer-form {
   display: flex;
 }
 .footer-input {
@@ -681,15 +702,15 @@ img {
   background-color: inherit;
   color: var(--primary-white-colour);
 }
-.subscribe-button{
+.subscribe-button {
   margin-left: 12px;
 }
-.button.send{
+.button.send {
   display: flex;
   align-items: center;
   margin-left: 12px;
 }
-.svg-send{
+.svg-send {
   margin-left: 10px;
 }
 /* Portfolio */
