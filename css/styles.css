@@ -131,7 +131,7 @@ img {
 .nav-item:focus {
   color: var(--accent-colour);
 }
-/* Контанкты */
+/* Контакты */
 .main-header-contacts {
   display: flex;
   margin-left: auto;
@@ -251,7 +251,6 @@ img {
 }
 .backdrop.is-hidden {
   opacity: 0;
-  visibility: hidden;
   pointer-events: none;
 }
 .backdrop.is-hidden .modal {
