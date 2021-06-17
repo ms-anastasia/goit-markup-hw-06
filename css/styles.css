@@ -313,7 +313,7 @@ img {
   align-items: center;
   justify-content: center;
 }
-.form-field {
+.form-container {
   position: relative;
 }
 .form-field:not(:last-child) {
