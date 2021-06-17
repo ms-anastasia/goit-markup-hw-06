@@ -655,6 +655,7 @@ img {
 .footer-flex {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
 .footer-social-links {
   display: flex;
@@ -692,6 +693,7 @@ img {
 }
 .footer-form {
   display: flex;
+  justify-content: space-between;
 }
 .footer-input {
   width: 358px;
@@ -702,9 +704,7 @@ img {
   background-color: inherit;
   color: var(--primary-white-colour);
 }
-.subscribe-button {
-  margin-left: 12px;
-}
+
 .button.send {
   display: flex;
   align-items: center;
