@@ -415,6 +415,7 @@ img {
   height: 15px;
   border-radius: 2px;
   border: solid 2px var(--secondary-text-colour);
+  cursor: pointer;
 }
 .checkbox:checked + .check-button {
   background-color: var(--accent-colour);
