@@ -67,45 +67,38 @@
                 <div class="form-flex">
                   <form class="form" autocomplete="off">
                     <b class="modal-header">Оставьте свои данные, мы вам перезвоним</b>
-                    <ul class="form-boxes">
-                      <li class="form-field">
-                        <div class="form-container">
-                          <label for="name" class="form-label">
-                            Имя</label>
-                          <input type="text" class="form-input" name="name" placeholder=" " autofocus/>
-                          <svg class="modal-svg" width="18px" height="18px">
-                            <use href="./images/icons.svg#icon-person"></use>
-                          </svg>
-                        </div>
-                      </li>
-                      <li class="form-field">
-                        <div class="form-container">
-                          <label for="tel" class="form-label">Телефон</label>
-                          <input type="tel" class="form-input" name="tel" placeholder=" " />
-                          <svg class="modal-svg" width="18px" height="18px">
-                            <use href="./images/icons.svg#icon-phone"></use>
-                          </svg>
-                        </div>
-                      </li>
-                      <li class="form-field">
-                        <div class="form-container">
-                          <label for="mail" class="form-label"> Почта</label>
-                          <input type="email" class="form-input" name="mail" placeholder=" " />
-                          <svg class="modal-svg"width="18px" height="18px" >
-                            <use href="./images/icons.svg#icon-email"></use>
-                          </svg>
-                        </div>
-                      </li>
-                      <li class="form-field">
-                        <div class="form-container">
-                          <label for="teaxtarea" class="form-label">
-                            Комментарий
-                          </label>
-                          <textarea name="teaxtarea" class="textarea" placeholder="Введите текст"></textarea>
-                        </div>
-                      </li>
-                    </ul>
-                    <label class="label">
+                    <div class="form-container">
+                      <label for="name" class="form-label">Имя</label>
+                      <div class="form-wrap">
+                        <input type="text" class="form-input" name="name" id="name" placeholder=" " autofocus required/>
+                        <svg class="modal-svg" width="18px" height="18px">
+                          <use href="./images/icons.svg#icon-person"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="form-container">
+                      <label for="tel" class="form-label">Телефон</label>
+                      <div class="form-wrap">
+                        <input type="tel" class="form-input" name="tel" id="tel" placeholder=" " required/>
+                        <svg class="modal-svg" width="18px" height="18px">
+                          <use href="./images/icons.svg#icon-phone"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="form-container">
+                      <label for="mail" class="form-label"> Почта</label>
+                      <div class="form-wrap">
+                        <input type="email" class="form-input" name="mail" id="mail" placeholder=" "/>
+                        <svg class="modal-svg" width="18px" height="18px" >
+                          <use href="./images/icons.svg#icon-email"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="form-container">
+                      <label for="textarea" class="form-label">Комментарий</label>
+                      <textarea name="textarea" class="textarea" id="textarea" placeholder="Введите текст"></textarea>
+                    </div>
+                    <label class="agreement-check">
                       <input type="checkbox" name="checkbox" class="checkbox" />
                       <span class="check-button"></span>
                         Соглашаюсь с рассылкой и принимаю
@@ -495,7 +488,7 @@
           <form class="footer-form">
             <input type="email" class="footer-input" placeholder="E-mail"/>
             <button type="submit" class="button send">Подписаться
-              <svg class="svg-send"width="24px" height="24px">
+              <svg class="svg-send" width="24px" height="24px">
                 <use href="./images/icons.svg#icon-send"></use>
               </svg>
             </button>
